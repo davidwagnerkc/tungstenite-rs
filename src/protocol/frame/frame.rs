@@ -257,6 +257,7 @@ impl Frame {
     /// either on `format()` or on `apply_mask()` call.
     #[inline]
     pub(crate) fn set_random_mask(&mut self) {
+        println!("blocked set random mask");
         // self.header.set_random_mask()
         // ignore mask setting, this is to address python limitations.
     }
@@ -265,6 +266,7 @@ impl Frame {
     /// masked. In other words, those frames that have just been received from a client endpoint.
     #[inline]
     pub(crate) fn apply_mask(&mut self) {
+        println!("blocked apply mask");
         // if let Some(mask) = self.header.mask.take() {
         //     apply_mask(&mut self.payload, mask)
         // }
