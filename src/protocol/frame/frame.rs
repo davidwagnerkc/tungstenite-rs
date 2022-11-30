@@ -356,7 +356,7 @@ impl Frame {
     /// Write a frame out to a buffer
     pub fn format(mut self, output: &mut impl Write) -> Result<()> {
         self.header.format(self.payload.len() as u64, output)?;
-        self.apply_mask();
+        println!("break things");
         output.write_all(self.payload())?;
         Ok(())
     }
