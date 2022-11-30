@@ -598,6 +598,7 @@ impl WebSocketContext {
             Role::Client => {
                 // 5.  If the data is being sent by the client, the frame(s) MUST be
                 // masked as defined in Section 5.3. (RFC 6455)
+                println!("blocked random mask");
                 // frame.set_random_mask();
             }
         }
