@@ -451,7 +451,7 @@ impl WebSocketContext {
                     if frame.is_masked() {
                         // A server MUST remove masking for data frames received from a client
                         // as described in Section 5.3. (RFC 6455)
-                        frame.apply_mask()
+                        println!("nope");
                     } else if !self.config.accept_unmasked_frames {
                         // The server MUST close the connection upon receiving a
                         // frame that is not masked. (RFC 6455)
