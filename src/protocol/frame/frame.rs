@@ -257,16 +257,18 @@ impl Frame {
     /// either on `format()` or on `apply_mask()` call.
     #[inline]
     pub(crate) fn set_random_mask(&mut self) {
-        self.header.set_random_mask()
+        // self.header.set_random_mask()
+        // ignore mask setting, this is to address python limitations.
     }
 
     /// This method unmasks the payload and should only be called on frames that are actually
     /// masked. In other words, those frames that have just been received from a client endpoint.
     #[inline]
     pub(crate) fn apply_mask(&mut self) {
-        if let Some(mask) = self.header.mask.take() {
-            apply_mask(&mut self.payload, mask)
-        }
+        // if let Some(mask) = self.header.mask.take() {
+        //     apply_mask(&mut self.payload, mask)
+        // }
+        // never apply mask, this is to address python limitations.
     }
 
     /// Consume the frame into its payload as binary.
