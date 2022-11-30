@@ -264,9 +264,7 @@ impl Frame {
     /// masked. In other words, those frames that have just been received from a client endpoint.
     #[inline]
     pub(crate) fn apply_mask(&mut self) {
-        if let Some(mask) = self.header.mask.take() {
-            apply_mask(&mut self.payload, mask)
-        }
+        println!("jioweijfklsdfjkljweifojkldfjwieofj");
     }
 
     /// Consume the frame into its payload as binary.
