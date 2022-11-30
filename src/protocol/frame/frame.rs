@@ -257,7 +257,7 @@ impl Frame {
     /// either on `format()` or on `apply_mask()` call.
     #[inline]
     pub(crate) fn set_random_mask(&mut self) {
-        self.header.set_random_mask()
+        println!("mhuhahahahaha");
     }
 
     /// This method unmasks the payload and should only be called on frames that are actually
